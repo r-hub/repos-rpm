@@ -1,0 +1,6 @@
+[rhub-repo]
+name=R-hub RPM repo for Fedora 38
+baseurl=https://rpms.r-pkg.org/fedora38
+enabled=1
+gpgcheck=1
+gpgkey=https://rpms.r-pkg.org/rhub.gpg.key
