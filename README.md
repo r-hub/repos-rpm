@@ -28,10 +28,13 @@ yum install -y createrepo rpm-build rpm-sign wget gcc python3 yum-utils pinentry
 ```
 
 ```
+cd /rpms
 gpg --import pgp-key.private
 echo "%_signature gpg
 %_gpg_name 2D0A34BD1C5AF134" > /root/.rpmmacros
 ```
+
+Copy or update the RPM files.
 
 ```
 export GPG_TTY=$(tty)
