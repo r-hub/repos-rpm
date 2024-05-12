@@ -7,6 +7,16 @@
 
 ## Using this repository
 
+Add the repository first:
+```
+curl -L -o /etc/yum.repos.d/rhub.repo https://rpms.r-pkg.org/fedora-38/rhub.repo
+```
+
+Then you can install packages as usual:
+```
+dnf install jags
+```
+
 ## Updating
 
 ```
