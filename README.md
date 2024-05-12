@@ -3,9 +3,15 @@
 
 ## Current packages
 
-* `JAGS 4.3.2` for Fedora 38, x86_64 and aarch64.
+* `JAGS 4.3.2` for Fedora 38, x86_64 and aarch64:
+  ```
+  https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.aarch64.rpm
+  https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.x86_64.rpm
+  ```
 
 ## Using this repository
+
+### Add the repository
 
 Add the repository first:
 ```
@@ -15,6 +21,14 @@ curl -L -o /etc/yum.repos.d/rhub.repo https://rpms.r-pkg.org/fedora-38/rhub.repo
 Then you can install packages as usual:
 ```
 dnf install jags
+```
+
+### One off installs
+
+For a one off installation, you don't need to add the repository.
+You can use the URL to the RPM files (see above) directly. E.g.
+```
+dnf install -y https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.x86_64.rpm
 ```
 
 ## Updating
