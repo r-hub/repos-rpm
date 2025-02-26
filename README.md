@@ -9,6 +9,12 @@
   https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.x86_64.rpm
   ```
 
+* `JAGS 4.3.2` for Fedora 43, x86_64 and aarch64:
+  ```
+  https://rpms.r-pkg.org/fedora-42/jags-4.3.2-1.aarch64.rpm
+  https://rpms.r-pkg.org/fedora-42/jags-4.3.2-1.x86_64.rpm
+  ```
+
 ## Using this repository
 
 ### Add the repository
@@ -16,6 +22,10 @@
 Add the repository first:
 ```
 curl -L -o /etc/yum.repos.d/rhub.repo https://rpms.r-pkg.org/fedora-38/rhub.repo
+```
+or 
+```
+curl -L -o /etc/yum.repos.d/rhub.repo https://rpms.r-pkg.org/fedora-42/rhub.repo
 ```
 
 Then you can install packages as usual:
@@ -29,6 +39,7 @@ For a one off installation, you don't need to add the repository.
 You can use the URL to the RPM files (see above) directly. E.g.
 ```
 dnf install -y https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.x86_64.rpm
+dnf install -y https://rpms.r-pkg.org/fedora-42/jags-4.3.2-1.x86_64.rpm
 ```
 
 ## Updating
@@ -53,10 +64,17 @@ Copy or update the RPM files.
 ```
 export GPG_TTY=$(tty)
 rpm --addsign /rpms/fedora-38/*.rpm
+rpm --addsign /rpms/fedora-42/*.rpm
 ```
 
 ```
 cd fedora-38
+createrepo .
+gpg --detach-sign --armor repodata/repomd.xml
+```
+
+```
+cd fedora-42
 createrepo .
 gpg --detach-sign --armor repodata/repomd.xml
 ```
