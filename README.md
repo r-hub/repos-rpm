@@ -9,10 +9,16 @@
   https://rpms.r-pkg.org/fedora-38/jags-4.3.2-1.x86_64.rpm
   ```
 
-* `JAGS 4.3.2` for Fedora 43, x86_64 and aarch64:
+* `JAGS 4.3.2` for Fedora 42, x86_64 and aarch64:
   ```
   https://rpms.r-pkg.org/fedora-42/jags-4.3.2-1.aarch64.rpm
   https://rpms.r-pkg.org/fedora-42/jags-4.3.2-1.x86_64.rpm
+  ```
+
+* `JAGS 4.3.2` for Fedora 44, x86_64 and aarch64:
+  ```
+  https://rpms.r-pkg.org/fedora-44/jags-4.3.2-1.aarch64.rpm
+  https://rpms.r-pkg.org/fedora-44/jags-4.3.2-1.x86_64.rpm
   ```
 
 ## Using this repository
@@ -65,18 +71,28 @@ Copy or update the RPM files.
 export GPG_TTY=$(tty)
 rpm --addsign /rpms/fedora-38/*.rpm
 rpm --addsign /rpms/fedora-42/*.rpm
+rpm --addsign /rpms/fedora-44/*.rpm
 ```
 
 ```
 cd fedora-38
 createrepo .
 gpg --detach-sign --armor repodata/repomd.xml
+cd ..
 ```
 
 ```
 cd fedora-42
 createrepo .
 gpg --detach-sign --armor repodata/repomd.xml
+cd ..
+```
+
+```
+cd fedora-44
+createrepo .
+gpg --detach-sign --armor repodata/repomd.xml
+cd ..
 ```
 
 ## Thanks
