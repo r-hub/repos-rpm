@@ -21,6 +21,12 @@
   https://rpms.r-pkg.org/fedora-44/jags-4.3.2-1.x86_64.rpm
   ```
 
+* `JAGS 5.0.2` for Fedora 44, x86_64 and aarch64:
+  ```
+  https://rpms.r-pkg.org/fedora-44/jags-5.0.2-1.aarch64.rpm
+  https://rpms.r-pkg.org/fedora-44/jags-5.0.2-1.x86_64.rpm
+  ```
+
 ## Using this repository
 
 ### Add the repository
